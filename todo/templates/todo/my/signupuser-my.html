@@ -1,0 +1,12 @@
+{% extends "todo/base.html" %}
+{% load static %}
+
+<h1>Регистрация</h1>
+{% block content %}
+{{ error }}
+<form method="POST" action="">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit">Sign up</button>
+</form>
+{% endblock %}

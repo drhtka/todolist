@@ -1,0 +1,37 @@
+{% extends "todo/base.html" %}
+{% load static %}
+{% load pluralize %}
+{% block title %}<title>Список всех дел</title>{% endblock title %}
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            {% if todos %}
+                <h1>Текущие Todos</h1>
+                 <h1>Выставлено {{ todos.count }} {{ todos.count|rupluralize:"задача,задачи,задач" }}</h1>
+            {% else %}
+
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+        {% if todos %}
+            <div class="list-group">
+                {% for todo in todos %}
+                    <a href="{% url 'viewtodo' todo.id %}" class="list-group-item list-group-item-success{% if todo.important %} list-group-item-danger{% endif %}"><b>{{ todo.title }}</b>
+                        {% if todo.memo %} - {{ todo.memo|truncatechars:30 }}
+        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center">
+                <h2>Похоже, у тебя нет дел! Хорошая работ.</h2>
+            <br>
+            <a role="button" class="btn btn-primary" href="{% url 'createtodo' %}">Новый Todo</a>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}
