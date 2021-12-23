@@ -2,14 +2,17 @@
 {% load static %}
 
 {% block content %}
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
-            <h2>Задача</h2>
-
+    <div class="container"></div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-10 col-sm-10 col-md-7 col-lg-5 col-xl-5">
+                <h2>Задача</h2>
+            </div>
         </div>
     </div>
+
+    <div class="container"></div>
     <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
+        <div class="col-10 col-sm-10 col-md-7 col-lg-5 col-xl-5">
             {% if error %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}
@@ -23,14 +26,77 @@
                 </div>
                 <div class="form-group">
                     <label for="memo">Описание</label>
-                    <textarea name="memo" class="form-control" id="memo" ></textarea>
+                    <textarea name="memo" class="form-control" rows="5" id="memo" ></textarea>
                 </div>
-                <div class="form-group form-check">
+                <div class="form-group form-check col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">
                     <input type="checkbox" name="important" class="form-check-input" id="important">
                     <label class="form-check-label" for="important">Важно</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 m-1">Сохранить</button>
+                </div>
             </form>
         </div>
     </div>
-{% endblock %}
+    </div>
+{% endblock content %}
+
+{% comment %}{% block footer %}
+
+    11111
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+{% endblock footer %}{% endcomment %}

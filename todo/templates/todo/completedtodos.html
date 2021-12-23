@@ -2,27 +2,38 @@
 {% load pluralize %}
 {% block content %}
 {#    <div class="row justify-content-center mt-5">#}
-{#        <div class="col-md-10">#}
+{#        <div class="col-md-6">#}
 {#            <h1>Выполнено</h1>#}
 {#        </div>#}
 {#    </div>#}
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-10">
-            {% if todos %}
-{#                <h1>Текущие Todos</h1>#}
-                <h1>Выполнено {{ todos.count }} {{ todos.count|rupluralize:"задача,задачи,задач" }}</h1>
-            {% else %}
 
-            {% endif %}
+    <div class="container">
+        <div class="row justify-content-center mt-5 ">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <div class="list-group">
+                {% if todos %}
+    {#                <h1>Текущие Todos</h1>#}
+                    <h1 class="text-center">Выполнено {{ todos.count }} {{ todos.count|rupluralize:"задача,задачи,задач" }}</h1>
+                {% else %}
+
+                {% endif %}
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-10">
-            <div class="list-group">
-                {% for todo in todos %}
-                    <a href="{% url 'viewtodo' todo.id %}" class="list-group-item list-group-item-action{% if todo.important %} list-group-item-danger{% endif %}"><b>
-                        {{ todo.title }}</b> - Completed {{ todo.datecompleted|date:'M j Y H:i' }}</a>
-                {% endfor %}
+
+
+    </div>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                    <div class="list-group">
+                        {% for todo in todos %}
+                            <a href="{% url 'viewtodo' todo.id %}" class="list-group-item list-group-item-action{% if todo.important %} list-group-item-danger {% else %} list-group-item-success{% endif %}"><b>
+                                {{ todo.title }}</b> - Completed {{ todo.datecompleted|date:'M j Y H:i' }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

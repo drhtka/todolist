@@ -1,0 +1,28 @@
+html{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body
+{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fda600;
+    /*color: white;*/
+    text-align: center;
+    padding: 15px;
+    font-weight: bolder;
+}
+
+.btn-done{
+    width: auto;
+}
+
