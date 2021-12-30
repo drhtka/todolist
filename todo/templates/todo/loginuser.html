@@ -1,12 +1,12 @@
 {% extends "todo/base.html" %}
 {% load static %}
 {% block content %}
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
-            <h2>Авторизация</h2>
+    <div class="row justify-content-center mt-3">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 row justify-content-center">
+            <h2 class="d-block">Авторизация</h2>
         </div>
     </div>
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center mt-2 content-down">
         <div class="col-md-5">
             {% if error %}
                 <div class="alert alert-danger" role="alert">
@@ -15,15 +15,17 @@
             {% endif %}
             <form method="POST">
                 {% csrf_token %}
-                <div class="form-group">
+                <div class="row justify-content-center">
+                <div class="form-group col-10 col-sm-10 col-md-12 col-lg-12 col-xl-12 text-center">
                     <label for="username">Логин</label>
                     <input type="text" name="username" class="form-control" id="username">
                 </div>
-                <div class="form-group">
+                <div class="form-group col-10 col-sm-10 col-md-12 col-lg-12 col-xl-12 text-center">
                     <label for="password">Пароль</label>
                     <input type="password" name="password" class="form-control" id="password">
                 </div>
-                <button type="submit" class="btn btn-primary">Авторизация</button>
+                <button type="submit" class="btn btn-primary col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center mt-3 mb-3">Авторизация</button>
+                </div>
             </form>
             <hr>
             <div class="text-center">

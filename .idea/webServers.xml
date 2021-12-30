@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="30d113e4-5645-47ee-9f6b-4e224d399d62" name="todolist">
+        <fileTransfer accessType="SFTP" host="ovz1.drhtka.pq4yn.vps.myjino.ru" port="49340" sshConfigId="be384a3a-761b-4f36-90d9-72e99d4c4e1d" sshConfig="root@ovz1.drhtka.pq4yn.vps.myjino.ru:49340 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

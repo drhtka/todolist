@@ -11,7 +11,7 @@ body
     overflow-x: hidden;
 }
 .footer {
-    position: fixed;
+    /*position: relative;*/
     left: 0;
     bottom: 0;
     width: 100%;
@@ -20,9 +20,49 @@ body
     text-align: center;
     padding: 15px;
     font-weight: bolder;
+    margin-top: 100px !important;
+}
+
+
+.content-down{
+    margin-bottom: 100px;
 }
 
 .btn-done{
     width: auto;
+}
+
+/*.field text{clear:both; text-align:left;}*/
+.text-center-pass{
+    margin: 0 auto !important;
+}
+
+.mb-create{
+    margin-bottom: 50px;
+}
+
+.datecompleted{
+    margin-bottom: 250px;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/* MEDIA */
+
+@media  (min-width: 320px) and (max-width: 556px) {
+    .flex-direction-pass{
+        display: revert;
+    }
+
+    .flex-direction-child{
+        flex-direction: column;
+    }
+
+    .footer-vis{
+        display: none;
+    }
 }
 

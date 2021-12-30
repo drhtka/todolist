@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="todolist" preserveTimestamps="false" createEmptyFolders="true" traceLevel="BRIEF" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
     <serverData>
       <paths name="cp4.hyperhost.ua">
         <serverdata>
@@ -9,6 +9,21 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="todolist">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/todolist/todolist" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="websocket@192.168.181.129:2202">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
