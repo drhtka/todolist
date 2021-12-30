@@ -75,12 +75,28 @@
         {% csrf_token %}
         <button id="delete" type="submit" >Удалить-2</button>
     </form>
-    {% block script %}
+
+{% endblock %}
+{% block js %}
     <script>
         //const mediaQuery = window.matchMedia('(min-width: 320px) and (max-width: 556px)')
-        {#const mediaQuery = window.matchMedia('(max-width: 556px)')#}
+        const mediaQuery = window.matchMedia('(min-width: 320px) and (max-width: 556px)')
         document.getElementsByClassName('footer')[0].classList.add('footer-vis');
+        if (mediaQuery.matches) {
+            //alert('Media Query Matched!')
+            const inputs = [...document.querySelectorAll('input, textarea')];
+            const content = document.querySelector('.footer');
 
+            inputs.forEach(inp =>{
+
+                inp.addEventListener('focus', (event) => {
+                    content.style.display = 'none';
+                });
+
+                inp.addEventListener('blur', (event) => {
+                    content.style.display = 'block';
+                });
+            })
+        }
     </script>
-    {% endblock script %}
-{% endblock %}
+{% endblock js %}
