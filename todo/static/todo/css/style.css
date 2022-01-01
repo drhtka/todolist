@@ -64,5 +64,11 @@ textarea {
     .footer-vis{
         display: none;
     }
+
+    .content-down {
+
+        margin-bottom: 200px;
+
+    }
 }
 

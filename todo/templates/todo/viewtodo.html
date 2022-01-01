@@ -9,7 +9,7 @@
             <h2 class="text-center">Задача</h2>
         </div>
     </div>
-    <div class="row justify-content-center mt-2">
+    <div class="row justify-content-center mt-2 content-down">
             {% if error %}
                 <div class="alert alert-danger" role="alert">
                     {{ error }}
@@ -78,7 +78,7 @@
 
 {% endblock %}
 {% block js %}
-    <script>
+    {% comment %}<script>
         //const mediaQuery = window.matchMedia('(min-width: 320px) and (max-width: 556px)')
         const mediaQuery = window.matchMedia('(min-width: 320px) and (max-width: 556px)')
         document.getElementsByClassName('footer')[0].classList.add('footer-vis');
@@ -98,5 +98,5 @@
                 });
             })
         }
-    </script>
+    </script>{% endcomment %}
 {% endblock js %}
